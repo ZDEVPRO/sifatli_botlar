@@ -1,0 +1,39 @@
+{% load static %}
+
+<!-- Start Blog Details Area -->
+<section class="blog-details-area ptb-110">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <div class="blog-details">
+                    <div class="article-content">
+                        <h2>{{ project.title }}</h2>
+                    </div>
+                    <br>
+                    <div class="article-image">
+                        <img src="{{ project.image.url }}" alt="image">
+                    </div>
+
+                    <div class="article-content">
+                        {{ project.content | safe }}
+                    </div>
+
+                    <div class="article-footer">
+                        <div class="article-tags">
+                            <span><i class="fas fa-bookmark"></i></span>
+
+                            <a>Sifatli Botlar</a>
+                        </div>
+
+                        <div class="article-share">
+                            <ul class="social">
+                                <li><a href="https://t.me/SifatliBotlar/" target="_blank"><i class="fab fa-telegram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Blog Details Area -->

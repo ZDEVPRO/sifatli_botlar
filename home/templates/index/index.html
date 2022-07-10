@@ -1,0 +1,158 @@
+{% load static %}
+
+<!-- Start Main Banner Area -->
+<div class="main-banner">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    {% for rs in home_title %}
+                        <div class="col-lg-6 col-md-12">
+                            <div class="main-banner-content">
+                                <h1>{{ rs.title }}</h1>
+                                <p>{{ rs.description }}</p>
+
+                                <div class="btn-box">
+                                    <a href="{% url 'projects' %}" class="btn btn-primary">Bizning Loyihalar</a>
+                                    <a href="{% url 'contact' %}" class="btn btn-light">Biz Bilan Aloqa</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <div class="col-lg-6 col-md-12">
+                        <div class="main-banner-image">
+                            <img src="{% static 'assets/img/banner-img1.png' %}" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shape6"><img src="{% static 'assets/img/shape/dot1.png' %}" alt="image"></div>
+    <div class="shape7"><img src="{% static 'assets/img/shape/dot2.png' %}" alt="image"></div>
+    <div class="shape8"><img src="{% static 'assets/img/shape/dot3.png' %}" alt="image"></div>
+    <div class="shape9"><img src="{% static 'assets/img/shape/dot4.png' %}" alt="image"></div>
+    <div class="shape10"><img src="{% static 'assets/img/shape/dot5.png' %}" alt="image"></div>
+    <div class="shape11"><img src="{% static 'assets/img/shape/dot6.png' %}" alt="image"></div>
+    <div class="shape12"><img src="{% static 'assets/img/shape/6.png' %}" alt="image"></div>
+    <div class="shape13"><img src="{% static 'assets/img/shape/7.png' %}" alt="image"></div>
+    <div class="shape14"><img src="{% static 'assets/img/shape/8.png' %}" alt="image"></div>
+    <div class="shape15"><img src="{% static 'assets/img/shape/9.png' %}" alt="image"></div>
+    <div class="shape16"><img src="{% static 'assets/img/shape/10.png' %}" alt="image"></div>
+    <div class="shape17"><img src="{% static 'assets/img/shape/11.png' %}" alt="image"></div>
+</div>
+<!-- Start Main banner Area -->
+
+<!-- Start Featured Services Area -->
+<section class="featured-services-area ptb-110">
+    <div class="container">
+        <div class="section-title">
+            <h2>Sifatli Botlar yordamida biznesingizni rivojlantiring</h2>
+            <p>Biz bilan hamkorlik qiling va oʻz biznesingizni telegramda rivojlantiring</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="single-featured-services-box">
+                    <div class="icon">
+                        <i class="flaticon-income"></i>
+                    </div>
+                    <h3>Umumiy statistika</h3>
+                    <p>Bizning botlar Oʻzbekiston boʻylab 200,000 dan ortiq guruhlarda faoliyat olib bormoqda</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="single-featured-services-box">
+                    <div class="icon bg-8c04d5">
+                        <i class="flaticon-work"></i>
+                    </div>
+                    <h3>Prasmotr</h3>
+                    <p>Bizning botlar faoliyat olib borayotgan guruhlarning aktivligi yuqori darajada! </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
+                <div class="single-featured-services-box">
+                    <div class="icon bg-d527b7">
+                        <i class="flaticon-big-data"></i>
+                    </div>
+                    <h3>Kunlik statistika</h3>
+                    <p>Botlarimizning har biri kuniga oʻrtacha 100-200ta guruhlarga qoʻshiladi va faoliyatini boshlaydi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Featured Services Area -->
+
+<!-- Start Features Area -->
+<section class="features-area ptb-110 pt-0">
+    <div class="container-fluid">
+        <div class="overview-box">
+            <div class="image left-image">
+                <img src="{% static 'assets/img/2.png' %}" alt="image">
+
+                <div class="shape-image"><img src="{% static 'assets/img/shape/1.png' %}" alt="image"></div>
+            </div>
+
+            <div class="content right-content">
+                <h3>Sifatli botlar jamoasining asosiy Hamkorlari</h3>
+                <p>Quyida keltirilgan kanallar biz bilan bir necha oydan beri hamkorlik qilib kelishmoqda va yaxshi natijalarga erishmoqdalar</p>
+
+                <ul class="features-list">
+                    {% for rs in customers %}
+                        <li><a href="{{ rs.link }}"><span><i class='bx bx-check-double'></i> {{ rs.title }}</span></a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="shape18"><img src="{% static 'assets/img/shape/dot1.png' %}" alt="image"></div>
+    <div class="shape19"><img src="{% static 'assets/img/shape/dot2.png' %}" alt="image"></div>
+    <div class="shape20"><img src="{% static 'assets/img/shape/dot3.png' %}" alt="image"></div>
+    <div class="shape21"><img src="{% static 'assets/img/shape/dot4.png' %}" alt="image"></div>
+    <div class="shape22"><img src="{% static 'assets/img/shape/dot5.png' %}" alt="image"></div>
+    <div class="shape23"><img src="{% static 'assets/img/shape/dot6.png' %}" alt="image"></div>
+</section>
+<!-- End Features Area -->
+
+<!-- Start FAQs Area -->
+<section class="faq-area ptb-110 bg-f4faff">
+    <div class="container">
+        <div class="section-title">
+            <h2>Ko'p beriladigan savollar</h2>
+            <p>Bizga foydalanuvchilar tomonidan ko'p beriladigan savollar va bu savollarning javoblari. Agar sizda ham shunga o'xshash savol bo'lsa, javobini shu yerni o'zida ko'rishingiz mumkun.</p>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="faq-image">
+                    <img src="{% static 'assets/img/faq.png' %}" alt="image">
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <div class="faq-accordion">
+                    <ul class="accordion">
+                        {% for rs in faq %}
+                        <li class="accordion-item">
+                            <a class="accordion-title" href="javascript:void(0)">{{ rs.title }} <i
+                                    class="fas fa-chevron-right"></i></a>
+                            <p class="accordion-content">{{ rs.description }}</p>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shape1"><img src="{% static 'assets/img/shape/1.svg' %}" alt="image"></div>
+    <div class="shape2"><img src="{% static 'assets/img/shape/2.svg' %}" alt="image"></div>
+    <div class="shape3"><img src="{% static 'assets/img/shape/4.png' %}" alt="image"></div>
+    <div class="shape4"><img src="{% static 'assets/img/shape/1.svg' %}" alt="image"></div>
+    <div class="shape5"><img src="{% static 'assets/img/shape/dot1.png' %}" alt="image"></div>
+</section>
+<!-- End FAQs Area -->

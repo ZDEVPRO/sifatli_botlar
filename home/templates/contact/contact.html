@@ -1,0 +1,111 @@
+{% load static %}
+
+
+<!-- Start Contact Area -->
+<section class="contact-area ptb-110">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="contact-info-box">
+                    <div class="icon">
+                        <i class='bx bx-envelope'></i>
+                    </div>
+
+                    <h3>Email</h3>
+                    <p>
+                        <a href="#"><span
+                                class="__cf_email__">aloqa@sifatlibotlar.uz</span></a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="contact-info-box">
+                    <div class="icon">
+                        <i class='bx bx-map'></i>
+                    </div>
+
+                    <h3>Manzil</h3>
+                    <p>Rishton shahri, Farg'ona Viloyati</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
+                <div class="contact-info-box">
+                    <div class="icon">
+                        <i class='fab fa-telegram'></i>
+                    </div>
+
+                    <h3>Telegram</h3>
+                    <p><a href="tel:1234567890">@Truefalselife</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <span>Biz bilan aloqa</span>
+            <h2>Savolingiz bormi?</h2>
+            <p>Har qanday Savol, taklif yoki murojatlaringiz bo'lsa bizga yozib qoldiring. Biz sizga eng qisqa vaqt
+                ichida javob beramiz.</p>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-4 col-md-4">
+                <div class="contact-image">
+                    <img src="{% static 'assets/img/contact.png' %}" alt="image">
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-8">
+                <div class="contact-form">
+                    {% block succes_message %}{% include 'components/success_message.html' %}{% endblock %}
+                    <form action="{% url 'contact' %}" method="post">{% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    {{ form.first_name }}
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    {{ form.last_name }}
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    {{ form.phone }}
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    {{ form.telegram }}
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    {{ form.message }}
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <button type="submit" class="btn btn-primary">Xabarni yuborish</button>
+                                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Contact Area -->

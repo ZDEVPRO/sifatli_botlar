@@ -1,0 +1,8 @@
+asgiref
+backports.zoneinfo
+Django
+django-ckeditor
+django-js-asset
+Pillow
+sqlparse
+whitenoise
